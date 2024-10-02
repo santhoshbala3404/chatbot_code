@@ -1,141 +1,212 @@
 ChatBot-:
-This is a chatbot which interacts with ERP system for managing documents, expenses, invoices, budgets, and reminders. It utilizes various libraries such as Tesseract for OCR, spaCy for natural language processing, and SQLite for data storage.
+This is a chatbot which interacts with ERP system for managing documents, expenses, invoices, budgets, and reminders. 
+
+It utilizes various libraries such as Tesseract for OCR, spaCy for natural language processing, and SQLite for data storage.
 
 
 Requirements-:
+
 1)Python 3.x
+
 2)pip (Python package manager)
 
 Required Libraries-:
+
 You will need the following libraries:
+
 1)Flask
+
 2)pytesseract
+
 3)Pillow
+
 4)spacy
+
 5)sqlite3 (part of the Python standard library)
+
 6)PyJWT
+
 7)scikit-learn
+
 8)Werkzeug
 
 Installation-:
+
 1)Clone the repository:
 
 bash-
+
 Copy code
+
 git clone <repository_url>
+
 cd <repository_directory>
 
 2)Install the required libraries:
+
 If you have pip set up, run the following command:
 
 bash-
+
 Copy code
+
 pip install Flask pytesseract Pillow spacy scikit-learn pyjwt Werkzeug
 
 3)Download the spaCy model:
+
 Run the following command to download the English language model:
 
+
 bash-
+
 Copy code
+
 python -m spacy download en_core_web_sm
+
 Install Tesseract OCR:
 
 4)Follow the installation instructions for Tesseract OCR.
+
 a)Ensure that the Tesseract executable is in your system's PATH.
+
 Running the Application
+
 Set the secret key:
+
 b)Update the SECRET_KEY in the code to a secure value.
 
 5)Run the application:
+
 In your terminal, execute the following command:
 
 bash-
+
 Copy code
+
 python app.py
 
 6)Access the application:
+
 Open a web browser and go to HTTP link given on executing
 
 
 API Endpoints
+
 The following API endpoints are available:
 
-1)Document Upload
-POST /uploads
+1)Document Upload-
+
+POST /uploads-
+
 Uploads a document and extracts text using Tesseract OCR.
 
-2)Named Entity Recognition (NER)
-POST /ner
+2)Named Entity Recognition (NER)-
+
+POST /ner-
+
 Performs NER on provided text.
 
-3)Train Classifier
-POST /train_classifier
+3)Train Classifier-
+
+POST /train_classifier-
+
 Trains the document classifier with provided documents and labels.
 
-4)Classify Document
-POST /classify
+4)Classify Document-
+
+POST /classify-
+
 Classifies a given document based on the trained model.
 
-5)Search Documents
-GET /search
+5)Search Documents-
+
+GET /search-
+
 Searches documents in the database.
 
-6)User Verification
-POST /verify
+6)User Verification-
+
+POST /verify-
+
 Verifies user credentials and returns a JWT token.
 
-7)Dashboard
-GET /dashboard
+7)Dashboard-
+
+GET /dashboard-
+
 Returns a welcome message if the token is valid.
 
-8)Account Balance Inquiry
-GET /account_balance
+8)Account Balance Inquiry-
+
+GET /account_balance-
+
 Returns dummy account balances.
 
-9)Transaction History
-GET /transaction_history
+9)Transaction History-
+
+GET /transaction_history-
+
 Returns a list of transactions, optionally filtered by date, type, and amount.
 
-10)Invoice Management
-POST /invoices
-Creates a new invoice.
+10)Invoice Management-
 
-GET /invoices
+POST /invoices-
+
+Creates a new invoice.-
+
+GET /invoices-
+
 Lists all invoices.
 
-GET /invoice_status/<invoice_id>
+GET /invoice_status/<invoice_id>-
+
 Returns the status of a specific invoice.
 
-11)Expense Tracking
-POST /track_expense
+11)Expense Tracking-
+
+POST /track_expense-
+
 Tracks a new expense.
 
-GET /monthly_expenses
+GET /monthly_expenses-
+
 Returns monthly expense summary.
 
-12)Budget Management
-POST /set_budget
+12)Budget Management-
+
+POST /set_budget-
+
 Sets a new budget.
 
-GET /budget_summary
+GET /budget_summary-
+
 Returns the budget summary for a specific category.
 
-13)Payment Reminders
-POST /payment_remainder
+13)Payment Reminders-
+
+POST /payment_remainder-
+
 Sets a payment reminder.
 
-GET /payment_reminders
+GET /payment_reminders-
+
 Lists all payment reminders.
 
-14)Role Management
-POST /role_management
+14)Role Management-
+
+POST /role_management-
+
 Updates the role of a user.
 
 Team Members and Contributions:
+
 1)Santhosh B-: Worked on the code and took demo video 
+
 2)Vignesh Balamurugan-: Worked on the code and created the presentation regarding our project
+
 3)Darshan R-: Worked on the code and created the README file
-4)Jeevan M-:Debugged the code and uploaded the code in GitHuh
+
+4)Jeevan M-:Debugged the code and uploaded the code in GitHub
 
 This solution stands out from other document management and processing applications due to several unique features and capabilities:
 
